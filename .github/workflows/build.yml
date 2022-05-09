@@ -2,7 +2,7 @@ name: Build
 on:
   push:
     branches:
-      - master # or the name of your main branch
+      - main # or the name of your main branch
 jobs:
   build:
     name: Build
@@ -15,7 +15,8 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-      - uses: sonarsource/sonarqube-quality-gate-action@master
-        timeout-minutes: 5
-        env:
-           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      
+      #- uses: sonarsource/sonarqube-quality-gate-action@master
+       # timeout-minutes: 5
+        #env:
+         #  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
